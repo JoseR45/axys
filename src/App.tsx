@@ -1,12 +1,12 @@
-import { Text } from "./shared/Text/text"
-function App() {
-  
+import "./App.css";
+import { LineTextComponent } from "./shared/LineTextComponent/line_text_component";
 
+function App() {
   return (
-     <>
-     <Text value="Mas" size="40px" font="family" color="red" ></Text>
-     </>
-  )
+    <>
+      <LineTextComponent text="albondiga" />
+    </>
+  );
 }
 
-export default App
+export default App;
