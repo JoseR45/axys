@@ -3,8 +3,8 @@ function App() {
   
 
   return (
-     <div className="w-3 bg-black h-2">
-       <Text value="Masasdasdasdasdasdasd" size="40px" font="family" color="red" />
+     <div  className="w-4 h-40">
+       <Text value="Masasdasdasdasdasdasda" size="10px" font="family" color="red" />
      </div>
   )
 }
