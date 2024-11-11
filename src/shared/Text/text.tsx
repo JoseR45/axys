@@ -3,7 +3,7 @@ import React from "react";
 
 export const Text: React.FC<iTextProps> = ({value, color, size, font}) =>{
     return(
-        <label style={{
+        <label className="w-full" style={{
             fontFamily: `${font}`,
             fontSize:`${size}`,
             color: `${color}`,
