@@ -2,7 +2,7 @@ Axys
 Bienvenido al proyecto Axys. Este es un proyecto desarrollado con React y TypeScript. A continuación, se detallan las convenciones y buenas prácticas que utilizamos en este repositorio para un desarrollo limpio y escalable.
 
 1. Convenciones de Nombres
-Interfaces: Todas las interfaces se definirán utilizando la convención de nombres con una "i" minúscula al inicio, por ejemplo, iUser, iProduct, etc.
+Interfaces: Todas las interfaces se definirán utilizando la convención de nombres con una "i" minúscula al inicio ademas de ser para propiedades se le agrege al final "Props" y si es para pasar , por ejemplo, iUserProps, iProduct, etc.
 Tipos vs Interfaces: En este proyecto, utilizamos interfaces en lugar de type para definir estructuras y objetos complejos. Esto se debe a que las interfaces ofrecen una mayor extensibilidad y compatibilidad con las clases.
 Archivos .d.ts: Todas las interfaces se guardarán en archivos con la extensión .d.ts para una mejor organización y claridad. Estos archivos sirven para definir tipos globales y mejorar la legibilidad del código.
 2. Ejemplo de Definición y Uso de Interfaces
@@ -12,15 +12,15 @@ Paso 1: Definir la Interfaz
 Crea un archivo con el nombre de la interfaz seguido de .d.ts, por ejemplo, user.d.ts:
 
 ```typescript
-Copiar código
 // user.d.ts
 
-export default interface iUser {
+ interface iUserProps {
   id: number;
   name: string;
   email: string;
   isActive: boolean;
 }
+export default iUser
 ```
 Paso 2: Importar la Interfaz en los Componentes
 Cuando necesites utilizar esta interfaz en un componente, simplemente importa la interfaz como se muestra a continuación:
