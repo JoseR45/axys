@@ -63,21 +63,19 @@ npm install
 # Inicia el servidor de desarrollo
 npm run dev
 5. Estructura del Proyecto
-plaintext
-Copiar código
+```plaintext
 src/
 ├── components/
-│   ├── UserComponent.tsx
-│   ├── Header.tsx
-│   └── Footer.tsx
+│   
 ├── hooks/
-│   └── useFetch.ts
-├── types/
-│   ├── user.d.ts
-│   └── product.d.ts
-├── services/
-│   └── userService.ts
+│
+├── shared/
+│   └── Text/
+│        ├── text.d.ts
+│        └── text.tsx
+│   
 └── App.tsx
+```
 6. Contribuir al Proyecto
 Si deseas contribuir a Axys, por favor sigue estos pasos:
 
