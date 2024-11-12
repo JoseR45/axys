@@ -11,7 +11,7 @@ A continuación, se muestra cómo se deben definir y exportar las interfaces en 
 Paso 1: Definir la Interfaz
 Crea un archivo con el nombre de la interfaz seguido de .d.ts, por ejemplo, user.d.ts:
 
-typescript
+```typescript
 Copiar código
 // user.d.ts
 
@@ -21,6 +21,7 @@ export default interface iUser {
   email: string;
   isActive: boolean;
 }
+```
 Paso 2: Importar la Interfaz en los Componentes
 Cuando necesites utilizar esta interfaz en un componente, simplemente importa la interfaz como se muestra a continuación:
 
