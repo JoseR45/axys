@@ -1,5 +1,5 @@
-Axys
-Bienvenido al proyecto Axys. Este es un proyecto desarrollado con React y TypeScript. A continuación, se detallan las convenciones y buenas prácticas que utilizamos en este repositorio para un desarrollo limpio y escalable.
+#Axys
+####Bienvenido al proyecto Axys. Este es un proyecto desarrollado con React y TypeScript. A continuación, se detallan las convenciones y buenas prácticas que utilizamos en este repositorio para un desarrollo limpio y escalable.
 
 1. Convenciones de Nombres
 Interfaces: Todas las interfaces se definirán utilizando la convención de nombres con una "i" minúscula al inicio ademas de ser para propiedades se le agrege al final "Props" y si es para pasar atributos se una "Attr" , por ejemplo, iUserProps, iProductAttr, etc.
@@ -43,10 +43,27 @@ const User: React.FC<iUserProps> = () => {
 
 export default User;
 ```
-3. Reglas de Codificación
-Nombrado de Archivos: Utilizamos el formato PascalCase para archivos de componentes (UserComponent.tsx) y camelCase para archivos auxiliares (userService.ts).
-Funciones Flecha: Se prioriza el uso de funciones flecha para mantener la consistencia y aprovechar el contexto léxico de this.
-Hooks: Todos los hooks personalizados deben empezar con el prefijo use, por ejemplo, useFetch, useAuth.
+En Axys, seguimos una serie de convenciones de nombres para mantener la consistencia y legibilidad del código. Asegúrate de seguir estas reglas al añadir nuevos archivos, componentes e interfaces.
+
+1. Formato de Nombres para Archivos
+Usamos snake_case para todos los nombres de archivos.
+Ejemplos:
+user_service.ts
+app_config.json
+api_client.ts
+2. Formato de Nombres para Componentes
+Usamos PascalCase para los nombres de componentes de React.
+Ejemplos:
+UserCard.tsx
+LoginForm.tsx
+Header.tsx
+3. Formato de Nombres para Interfaces
+Usamos camelCase para los nombres de interfaces, con un prefijo i para diferenciarlas.
+Ejemplos:
+iUser
+iProduct
+iAuthResponse
+
 4. Configuración del Proyecto
 Para configurar el entorno y ejecutar el proyecto en tu máquina local, sigue los siguientes pasos:
 
