@@ -1,11 +1,11 @@
 import React from "react"
 
-interface  iTextProps {
-    
+interface iTextProps {
+
     value: string;
     color: string;
     size: string;
-    font: string = "Helvetica Compressed";    
+    font: string = "Helvetica Compressed";
 }
 
 

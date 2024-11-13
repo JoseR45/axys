@@ -1,12 +1,29 @@
-import { Text } from "./shared/Text/text"
-function App() {
-  
+import { HR } from "./shared/HR/hr";
+import { Ticker } from "./shared/Ticker/ticker";
 
+function App() {
   return (
-     <div className="w-3 bg-black h-2">
-       <Text value="Masasdasdasdasdasdasd" size="40px" font="family" color="red" />
-     </div>
-  )
+    <div>
+      <Ticker speed={100} from="right">
+        <p style={{ fontSize: "3rem" }}>BACKEND.</p>
+        <p style={{ fontSize: "3rem" }}>FRONTEND.</p>
+        <p style={{ fontSize: "3rem" }}>DEVOPS.</p>
+        <p style={{ fontSize: "3rem" }}>DESIGN.</p>
+        <p style={{ fontSize: "3rem" }}>DATABASE.</p>
+        <p style={{ fontSize: "3rem" }}>ANALIST.</p>
+      </Ticker>
+
+      <Ticker speed={100} from="left">
+        <p style={{ fontSize: "3rem" }}>BACKEND.</p>
+        <p style={{ fontSize: "3rem" }}>FRONTEND.</p>
+        <p style={{ fontSize: "3rem" }}>DEVOPS.</p>
+        <p style={{ fontSize: "3rem" }}>DESIGN.</p>
+        <p style={{ fontSize: "3rem" }}>DATABASE.</p>
+        <p style={{ fontSize: "3rem" }}>ANALIST.</p>
+      </Ticker>
+      <HR from="center" />
+    </div>
+  );
 }
 
-export default App
+export default App;
