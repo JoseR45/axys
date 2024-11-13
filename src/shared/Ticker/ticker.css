@@ -1,0 +1,17 @@
+#ticker-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #f2f2f2;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+#ticker {
+  display: inline-block;
+}
+
+.ticker-item {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
