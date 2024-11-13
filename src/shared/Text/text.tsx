@@ -3,12 +3,12 @@ import React from "react";
 
 export const Text: React.FC<iTextProps> = ({value, color, size, font}) =>{
     return(
-        <p className={`break-words`} style={{
+        <label className="w-full" style={{
             fontFamily: `${font}`,
             fontSize:`${size}`,
             color: `${color}`,
         }}>
             {value}
-        </p>
+        </label>
     );
 }
