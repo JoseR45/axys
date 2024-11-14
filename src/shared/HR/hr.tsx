@@ -8,10 +8,10 @@ export const HR: React.FC<iHRProps> = ({ from }) => {
         border: "none",
         height: "1px",
         backgroundImage: `linear-gradient(${
-          from === "left" ? "to right" : "to left"
+          from === "left" ? "to left" : "to right"
         }, ${
           from === "center"
-            ? "#FFFFFF 0%, #999999 50%, #FFFFFF 100%"
+            ? "#999999 0%, #FFFFFF 50%, #999999 100%"
             : "#999999 0%, #FFFFFF 100%"
         })`,
       }}
