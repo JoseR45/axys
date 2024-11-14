@@ -1,12 +1,14 @@
-import React from "react"
+type TextAlign = "left" | "right" | "center" | "justify" | "start" | "end" | "inherit" | "initial" | "unset";
 
 interface iTextProps {
-
     value: string;
     color: string;
     size: string;
-    font: string = "Helvetica Compressed";
-}
+    family?: string;
+    weight?: string;
+    lineHeight?: string;
+    textAlign: TextAlign;
 
+}
 
 export default iTextProps;
