@@ -11,7 +11,7 @@ export const HR: React.FC<iHRProps> = ({ from }) => {
           from === "left" ? "to left" : "to right"
         }, ${
           from === "center"
-            ? "#FFFFFF 0%, #999999 50%, #FFFFFF 100%"
+            ? "#999999 0%, #FFFFFF 50%, #999999 100%"
             : "#999999 0%, #FFFFFF 100%"
         })`,
       }}
