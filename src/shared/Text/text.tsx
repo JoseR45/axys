@@ -1,14 +1,28 @@
-import iTextProps from "./text.d";
 import React from "react";
+import iTextProps from "./text.d";
 
-export const Text: React.FC<iTextProps> = ({value, color, size, font}) =>{
-    return(
-        <label className="w-full" style={{
-            fontFamily: `${font}`,
-            fontSize:`${size}`,
-            color: `${color}`,
-        }}>
-            {value}
-        </label>
-    );
-}
+export const Text: React.FC<iTextProps> = ({
+  value,
+  color,
+  size,
+  family = "Helvetica Compressed",
+  weight,
+  lineHeight,
+  textAlign,
+}) => {
+  return (
+    <p
+      className="w-full"
+      style={{
+        fontFamily: `${family}, sans-serif`,
+        fontSize: `${size}`,
+        color: `${color}`,
+        fontWeight: `${weight}`,
+        lineHeight: `${lineHeight}`,
+        textAlign: `${textAlign}`,
+      }}
+    >
+      {value}
+    </p>
+  );
+};
