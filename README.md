@@ -86,17 +86,50 @@ npm run dev
 ```
 ## 5. Estructura del Proyecto
 ```plaintext
-src/
-├── components/
-│   
-├── hooks/
-│
-├── shared/
-│   └── Text/
-│        ├── text.d.ts
-│        └── text.tsx
-│   
-└── App.tsx
+src
+├── assets
+│   ├── fonts
+│   │   └── helvetica-compressed.otf
+│   └── react.svg
+├── header
+│   ├── components
+│   │   ├── Nav
+│   │   │   ├── nav.css
+│   │   │   ├── nav.d.ts
+│   │   │   └── nav.tsx
+│   │   └── NavItem
+│   │       ├── nav_item.d.ts
+│   │       └── nav_item.tsx
+│   ├── header.d.ts
+│   ├── header.tsx
+│   └── hooks
+│       └── use_marker.tsx
+├── sections
+│   └── choose_us
+│       └── choose_us.tsx
+├── shared
+│   ├── Circle
+│   │   ├── circle.d.ts
+│   │   └── circle.tsx
+│   ├── HR
+│   │   ├── hr.d.ts
+│   │   └── hr.tsx
+│   ├── Line
+│   │   ├── line.d.ts
+│   │   └── line.tsx
+│   ├── SectionEnd
+│   │   ├── section_end.d.ts
+│   │   └── section_end.tsx
+│   ├── Text
+│   │   ├── text.d.ts
+│   │   └── text.tsx
+│   └── Ticker
+│       ├── ticker.css
+│       ├── ticker.d.ts
+│       └── ticker.tsx
+├── index.css
+├── main.tsx
+└── vite-env.d.ts
 ```
 
 ## 7. Licencia
