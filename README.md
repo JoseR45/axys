@@ -135,7 +135,7 @@ src
 # Convenciones de Commits
 
 Para este proyecto, utilizaremos el estándar de **Conventional Commits**. A continuación, se detallan los prefijos y formatos que deben seguirse al realizar commits en el repositorio.
-
+- link: https://www.conventionalcommits.org/en/v1.0.0/
 ## Formato General
 
 Cada commit debe seguir este formato:
@@ -158,67 +158,67 @@ A continuación, se detallan los tipos de commits que puedes utilizar:
 ### 1. `feat`: Nuevas Funcionalidades
 Usar cuando agregues una nueva característica o funcionalidad al proyecto.
 
-feat(<componente>): agrega soporte para autenticación con JWT
+- feat(<componente>): agrega soporte para autenticación con JWT
 
 
 ### 2. `fix`: Corrección de Errores
 Para la solución de errores y bugs.
 
-fix(<módulo>): corrige error en el cálculo de totales
+- fix(<módulo>): corrige error en el cálculo de totales
 
 
 ### 3. `docs`: Documentación
 Cuando se actualiza o modifica la documentación del proyecto (README, comentarios, etc.).
 
-docs(<archivo>): actualiza documentación de instalación en README
+- docs(<archivo>): actualiza documentación de instalación en README
 
 
 ### 4. `style`: Estilos y Formato
 Cambios que no afectan la lógica del código, como correcciones de estilo, formato, espacios, comas, etc.
 
-style(<archivo>): ajusta identación y elimina espacios extra
+- style(<archivo>): ajusta identación y elimina espacios extra
 
 
 ### 5. `refactor`: Refactorización
 Cambios en el código que no corrigen un bug ni agregan una funcionalidad, como mejoras en la estructura del código o limpieza.
 
-refactor(<componente>): optimiza función de renderizado
+- refactor(<componente>): optimiza función de renderizado
 
 
 ### 6. `test`: Pruebas
 Uso exclusivo para la creación o modificación de tests.
 
-test(<servicio>): agrega pruebas unitarias para función de login
+- test(<servicio>): agrega pruebas unitarias para función de login
 
 
 ### 7. `chore`: Tareas Generales
 Para tareas menores o que no afectan la lógica del código (actualización de dependencias, configuración, etc.).
 
-chore(<dependencias>): actualiza versión de eslint a 8.0.0
+- chore(<dependencias>): actualiza versión de eslint a 8.0.0
 
 
 ### 8. `perf`: Mejoras de Rendimiento
 Optimización de la aplicación en cuanto a rendimiento.
 
-perf(<componente>): mejora eficiencia del renderizado en tabla de datos
+- perf(<componente>): mejora eficiencia del renderizado en tabla de datos
 
 
 ### 9. `ci`: Integración Continua
 Cambios en los archivos y scripts de configuración de CI (por ejemplo, GitHub Actions, CircleCI).
 
-ci(<pipeline>): agrega script de despliegue para entorno de producción
+- ci(<pipeline>): agrega script de despliegue para entorno de producción
 
 
 ### 10. `build`: Compilación y Dependencias
 Cambios que afectan el sistema de compilación o las dependencias externas (como actualizar `webpack`, `gulp`, etc.).
 
-build(<proyecto>): configura webpack para producción
+- build(<proyecto>): configura webpack para producción
 
 
 ### 11. `revert`: Revertir Cambios
 Para revertir un commit anterior.
 
-revert: revierte commit 1234abcd que causaba errores en producción
+- revert: revierte commit 1234abcd que causaba errores en producción
 
 
 ### Notas Adicionales
