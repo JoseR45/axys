@@ -6,7 +6,7 @@ import { iSocialMediaSet } from "./social_media_set.d";
 export const SocialMediaSet: React.FC<iSocialMediaSet> = ({
   children,
   orientation,
-  backgroundColor = "#1D1D1B",
+  backgroundColor = "transparent",
 }) => {
   const SocialMediaSetClassName = `inline-flex gap-[40px] items-center ${
     orientation === "horizontal" ? "flex-row" : "flex-col"

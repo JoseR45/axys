@@ -1,4 +1,4 @@
-interface iNavProps {
-}
-
-export default iNavProps;
+export interface iNavProps {
+    className?: string;
+    showMarker?: boolean;
+};
