@@ -13,6 +13,8 @@ interface iTickerProps extends PropsWithChildren<{
      * Direction from which the ticker starts: "left" or "right". 
      */
     from: "left" | "right";
+
+    backgroundColor: string;
 }> { };
 
 export default iTickerProps;
