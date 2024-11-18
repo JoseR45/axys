@@ -1,11 +1,9 @@
 import React from "react";
 import iHRProps from "./hr.d";
 
-export const HR: React.FC<iHRProps> = ({ from,className }) => {
-  
+export const HR: React.FC<iHRProps> = ({ from }) => {
   return (
     <hr
-    className={`${className || ''}`} // Extended functionality by LeudiX
       style={{
         border: "none",
         height: "1px",

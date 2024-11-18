@@ -1,7 +1,6 @@
 type TextAlign = "left" | "right" | "center" | "justify" | "start" | "end" | "inherit" | "initial" | "unset" ;
 
 interface iTextProps {
-    className?: string; //Extended functionality by LeudiX
     value: string;
     color: string;
     size: string;
