@@ -27,7 +27,7 @@ export const ChooseUs = () => {
     }, []);
     
     return(
-        <section className="bg-primary w-full  min-h-[600px] min-w-[600px]  flex flex-col">
+        <section className="bg-primary w-full min-h-[600px] min-w-[600px]  flex flex-col">
             <div className=" w-full h-8 flex items-center justify-center">
                <div className="md:w-3/12 w-5/12  h-full">
                     <Text 
@@ -82,8 +82,9 @@ export const ChooseUs = () => {
             {isMobile&& <br /> }
             <div>
                 <Ticker backgroundColor="transparent" from="right" speed={88}>
-                {ticker_content.map((data) => {
-                    return(<Text 
+                {ticker_content.map((data, idx) => {
+                    return(<Text
+                        key={idx} 
                         value={data} 
                         size={isMobile?"40px":"64px" }
                         color="text-secundary" 
@@ -93,8 +94,9 @@ export const ChooseUs = () => {
                 })}
                 </Ticker>
                 <Ticker backgroundColor="transparent" from="left" speed={103}>
-                {ticker_content.map((data) => {
+                {ticker_content.map((data, idx) => {
                     return(<Text 
+                        key={idx}
                         value={data} 
                         size={isMobile?"40px":"64px" } 
                         color="text-secundary" 
