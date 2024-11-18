@@ -12,7 +12,7 @@ export const Text: React.FC<iTextProps> = ({
 }) => {
   return (
     <p
-      className="w-full"
+      className={`w-full break-words ${color} relative z-30`}
       style={{
         fontFamily: `${family}, sans-serif`,
         fontSize: `${size}`,
