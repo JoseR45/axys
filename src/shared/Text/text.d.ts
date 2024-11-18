@@ -1,4 +1,4 @@
-type TextAlign = "left" | "right" | "center" | "justify" | "start" | "end" | "inherit" | "initial" | "unset";
+type TextAlign = "left" | "right" | "center" | "justify" | "start" | "end" | "inherit" | "initial" | "unset" ;
 
 interface iTextProps {
     value: string;

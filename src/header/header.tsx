@@ -5,8 +5,8 @@ import { Nav } from "./components/Nav/nav";
 export const Header: React.FC<{}> = ({}) => {
   return (
     <>
-      <div id="header-container">
-        <header className="bg-primary w-full fixed top-0 flex flex-row justify-between items-center">
+      <div id="header-container" className={"w-[1200px]"}>
+        <header className="bg-transparent w-full flex flex-row justify-between items-center">
           <div id="logo-container">
             <Text
               value="LOGO"

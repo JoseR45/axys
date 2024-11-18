@@ -12,6 +12,7 @@ export const Ticker: React.FC<iTickerProps> = ({
   children,
   speed,
   from,
+  backgroundColor,
 }: iTickerProps): JSX.Element => {
   // Ref to access the ticker div element.
   const tickerRef = useRef<HTMLDivElement>(null);
@@ -62,7 +63,7 @@ export const Ticker: React.FC<iTickerProps> = ({
 
     // Cleanup event listener on component unmount.
     return () => window.removeEventListener("resize", calculateDuration);
-  }, [children, speed, from]); // Re-run the effect when children, speed, or from change.
+  }, [children, speed, from, backgroundColor]); // Re-run the effect when children, speed, or from change.
 
   // Wrap each child in a div with class 'ticker-item' for styling.
   const modifiedChildren = React.Children.map(children, (child) => (
@@ -72,7 +73,10 @@ export const Ticker: React.FC<iTickerProps> = ({
   return (
     <div>
       <style>{animation}</style> {/* Inject the animation CSS dynamically */}
-      <div id="ticker-container">
+      <div
+        id="ticker-container"
+        style={{ backgroundColor: `${backgroundColor}` }}
+      >
         {/* Container to hold the ticker */}
         <div
           id="ticker"
