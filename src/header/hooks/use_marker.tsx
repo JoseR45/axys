@@ -9,7 +9,7 @@ export function useMarker() {
 
   const [currentHref, setCurrentHref] = useState<string>(location.href);
 
-  const handleCurrentHref: MouseEventHandler<HTMLAnchorElement> = (
+  const handleClickCurrentHref: MouseEventHandler<HTMLAnchorElement> = (
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
     const htmlAnchorElement = e.currentTarget as HTMLAnchorElement;
@@ -43,5 +43,5 @@ export function useMarker() {
     updateMarker(currentHref);
   }, [currentHref]);
 
-  return { navItemContainerRef, markerStyle, handleCurrentHref };
+  return { navItemContainerRef, markerStyle, handleClickCurrentHref };
 }

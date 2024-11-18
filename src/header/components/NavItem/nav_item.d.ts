@@ -1,11 +1,5 @@
 import { MouseEventHandler, PropsWithChildren } from "react";
-
-interface iNavItemAttrs {
+export interface iNavItemProps extends PropsWithChildren<{}> {
     href: string;
+    handleClickCurrentHref: MouseEventHandler;
 }
-
-interface iNavItemProps extends PropsWithChildren<iNavItemAttrs> {
-    handleCurrentHref: MouseEventHandler;
-}
-
-export default iNavItemProps;
