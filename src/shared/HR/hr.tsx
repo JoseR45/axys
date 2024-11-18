@@ -11,8 +11,8 @@ export const HR: React.FC<iHRProps> = ({ from }) => {
           from === "left" ? "to left" : "to right"
         }, ${
           from === "center"
-            ? "#999999 0%, #FFFFFF 50%, #999999 100%"
-            : "#999999 0%, #FFFFFF 100%"
+            ? "rgba(153, 153, 153, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(153, 153, 153, 0) 100%"
+            : "rgba(153, 153, 153, 0) 0%, rgba(255, 255, 255, 1) 100%"
         })`,
       }}
     />
