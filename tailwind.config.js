@@ -14,6 +14,11 @@ export default {
         'secundary': 'rgba(255, 255, 255, 0.6)',
       },
     },
+    fontFamily: {
+      'compressed': ['Helvetica Compressed'],
+      'helvetica': ['Helvetica'],
+      
+    }
   },
   plugins: [],
 }
