@@ -2,6 +2,7 @@ import React from "react";
 import iTextProps from "./text.d";
 
 export const Text: React.FC<iTextProps> = ({
+  className,
   value,
   color,
   size,
@@ -12,7 +13,7 @@ export const Text: React.FC<iTextProps> = ({
 }) => {
   return (
     <p
-      className="w-full"
+      className={`${className || ''}`} // Extended functionality by LeudiX
       style={{
         fontFamily: `${family}, sans-serif`,
         fontSize: `${size}`,
