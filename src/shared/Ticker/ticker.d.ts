@@ -5,6 +5,8 @@ import { PropsWithChildren } from "react";
  * Extends PropsWithChildren to include child elements.
  */
 interface iTickerProps extends PropsWithChildren<{
+    //Placeholder for future extension(If not intended to be extended you should use type instead of interface) 
+    
     /**
      * Speed of the ticker in pixels per second.
      */
@@ -13,6 +15,6 @@ interface iTickerProps extends PropsWithChildren<{
      * Direction from which the ticker starts: "left" or "right". 
      */
     from: "left" | "right";
-}> { };
+}> {};
 
 export default iTickerProps;
