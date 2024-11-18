@@ -1,7 +1,6 @@
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { MouseEventHandler, useState } from "react";
-import { Text } from "../shared/Text/text";
 import { Nav } from "./components/Nav/nav";
 import { iHeaderProps } from "./header.d";
 
@@ -14,7 +13,10 @@ export const Header: React.FC<iHeaderProps> = ({}) => {
 
   return (
     <>
-      <div id="header-container" className={`w-full bg-primary fixed top-0`}>
+      <div
+        id="header-container"
+        className={`w-full bg-primary fixed top-0 z-40`}
+      >
         <header
           className={`w-full flex flex-col md:flex-row justify-between items-center p-2`}
         >
