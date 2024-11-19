@@ -8,7 +8,7 @@ export const SocialMediaSet: React.FC<iSocialMediaSet> = ({
   orientation,
   backgroundColor = "transparent",
 }) => {
-  const SocialMediaSetClassName = `inline-flex gap-[40px] items-center ${
+  const SocialMediaSetClassName = `inline-flex gap-[30px] items-center ${
     orientation === "horizontal" ? "flex-row" : "flex-col"
   }`;
 
@@ -32,7 +32,7 @@ export const SocialMediaSet: React.FC<iSocialMediaSet> = ({
                 key={index}
                 icon={icon}
                 color="#ffffff"
-                style={{ fontSize: "30px" }}
+                size="xl"
               />
             ))}
       </div>

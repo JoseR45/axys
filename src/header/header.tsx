@@ -1,13 +1,10 @@
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { MouseEventHandler, useState } from "react";
-import { Text } from "../shared/Text/text";
 import { Nav } from "./components/Nav/nav";
 import { iHeaderProps } from "./header.d";
 
-export const Header: React.FC<iHeaderProps> = ({
-  backgroundColor = "transparent",
-}) => {
+export const Header: React.FC<iHeaderProps> = ({}) => {
   const [showItems, setShowItems] = useState<boolean>(false);
 
   const handleClickShowItems: MouseEventHandler<HTMLDivElement> = () => {
@@ -16,9 +13,12 @@ export const Header: React.FC<iHeaderProps> = ({
 
   return (
     <>
-      <div id="header-container" className={`w-full bg-[${backgroundColor}]`}>
+      <div
+        id="header-container"
+        className={`w-full bg-primary fixed top-0 z-40`}
+      >
         <header
-          className={`w-full flex flex-col md:flex-row justify-between items-center`}
+          className={`w-full flex flex-col md:flex-row justify-between items-center p-2`}
         >
           <div
             className={
@@ -26,15 +26,11 @@ export const Header: React.FC<iHeaderProps> = ({
             }
           >
             <div id="logo-container">
-              <Text
-                value="LOGO"
-                size="40px"
-                color="white"
-                family="Inter"
-                weight="400"
-                lineHeight="48px"
-                textAlign="left"
-              />
+              <p
+                className={`text-[40px] font-[400] text-white text-center font-compressed`}
+              >
+                LOGO
+              </p>
             </div>
             <div className={`visible md:hidden`} onClick={handleClickShowItems}>
               <FontAwesomeIcon

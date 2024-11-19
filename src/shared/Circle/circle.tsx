@@ -4,9 +4,9 @@ import iCircleProps from "./circle.d";
 export const Circle: React.FC<iCircleProps> = ({ radio, color, border, to }) => {
   const bg_color = () => {
     if (color == "white") {
-      return border ? "border-white" : "bg-white";
+      return border ? "border-secundary" : "bg-secundary";
     } else if (color == "black") {
-      return border ? "border-black" : "bg-black";
+      return border ? "border-primary" : "bg-primary";
     } else {
       return "";
     }
@@ -14,7 +14,7 @@ export const Circle: React.FC<iCircleProps> = ({ radio, color, border, to }) => 
 
   return (
     <div
-      className={`${bg_color()} rounded-full ${border} border-[2px]`}
+      className={`${bg_color()} rounded-full ${border} ${border&& "border-[2px]"}`}
       style={{
         width: `${radio * 2}px`,
         height: `${radio * 2}px`,
