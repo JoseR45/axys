@@ -13,7 +13,15 @@ export default {
         'primary': '#1D1D1B', 
         'secundary': 'rgba(255, 255, 255, 0.6)',
       },
+      screens: {
+        'xs': '480px',
+      },
     },
+    fontFamily: {
+      'compressed': ['Helvetica Compressed'],
+      'helvetica': ['Helvetica'],
+      
+    }
   },
   plugins: [],
 }

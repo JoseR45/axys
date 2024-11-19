@@ -1,14 +1,14 @@
-import iNavItemProps from "./nav_item.d";
+import { iNavItemProps } from "./nav_item.d";
 
 export const NavItem: React.FC<iNavItemProps> = ({
   children,
   href,
-  handleCurrentHref,
+  handleClickCurrentHref,
 }) => {
   return (
     <>
-      <div className={"nav-item"} style={{ padding: "0px 8px 0px 8px" }}>
-        <a href={href} onClick={(e) => handleCurrentHref(e)}>
+      <div className={`px-0 py-2 md:px-3 md:py-0`}>
+        <a href={href} onClick={(e) => handleClickCurrentHref(e)}>
           {children}
         </a>
       </div>

@@ -3,20 +3,23 @@ import { HR } from "../../../shared/HR/hr";
 import { Text } from "../../../shared/Text/text";
 import { useMarker } from "../../hooks/use_marker";
 import { NavItem } from "../NavItem/nav_item";
-import "./nav.css";
-import iNavProps from "./nav.d";
+import { iNavProps } from "./nav.d";
 
-export const Nav: React.FC<iNavProps> = ({}) => {
-  const { navItemContainerRef, markerStyle, handleCurrentHref } = useMarker();
+export const Nav: React.FC<iNavProps> = ({ showMarker = false }) => {
+  const { navItemContainerRef, markerStyle, handleClickCurrentHref } =
+    useMarker();
 
   return (
     <>
-      <div id="nav-container">
-        <nav id="nav" className={"flex flex-col"}>
-          <div id="nav-item-container" ref={navItemContainerRef}>
+      <div>
+        <nav className={"flex flex-col"}>
+          <div
+            className={`flex flex-col md:flex-row justify-center items-center`}
+            ref={navItemContainerRef}
+          >
             <NavItem
               href={"#about-section"}
-              handleCurrentHref={handleCurrentHref}
+              handleClickCurrentHref={handleClickCurrentHref}
             >
               <Text
                 value="ABOUT"
@@ -30,7 +33,7 @@ export const Nav: React.FC<iNavProps> = ({}) => {
             </NavItem>
             <NavItem
               href={"#services-section"}
-              handleCurrentHref={handleCurrentHref}
+              handleClickCurrentHref={handleClickCurrentHref}
             >
               <Text
                 value="SERVICES"
@@ -44,7 +47,7 @@ export const Nav: React.FC<iNavProps> = ({}) => {
             </NavItem>
             <NavItem
               href={"#contact-section"}
-              handleCurrentHref={handleCurrentHref}
+              handleClickCurrentHref={handleClickCurrentHref}
             >
               <Text
                 value="CONTACT"
@@ -58,10 +61,9 @@ export const Nav: React.FC<iNavProps> = ({}) => {
             </NavItem>
           </div>
           <div
-            id="nav-item-marker-container"
-            style={{
-              width: `${navItemContainerRef.current?.offsetWidth}`,
-            }}
+            className={`${showMarker ? "flex" : "hidden"} relative w-[${
+              navItemContainerRef.current?.offsetWidth
+            }]`}
           >
             <div
               id="nav-item-marker"
