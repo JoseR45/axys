@@ -1,7 +1,7 @@
 
 
 interface iLineProps {
-    orientation?: "w" | 'h';
+    orientation?: "Horizontal" | 'vertical';
     length?: number;
 }
 
