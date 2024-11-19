@@ -27,7 +27,7 @@ export const ChooseUs = () => {
     }, []);
     
     return(
-        <section className="bg-primary w-full min-h-[600px] min-w-[600px]  flex flex-col">
+        <section className="bg-primary mb-10 w-full min-h-[600px] min-w-[600px]  flex flex-col">
             <div className=" w-full h-8 flex items-center justify-center">
                <div className="md:w-3/12 w-5/12  h-full">
                     <Text 
