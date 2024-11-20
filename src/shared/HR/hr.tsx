@@ -1,9 +1,10 @@
 import React from "react";
 import iHRProps from "./hr.d";
 
-export const HR: React.FC<iHRProps> = ({ from }) => {
+export const HR: React.FC<iHRProps> = ({ from, className }) => {
   return (
     <hr
+      className={className}
       style={{
         border: "none",
         height: "1px",
