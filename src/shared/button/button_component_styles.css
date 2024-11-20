@@ -15,8 +15,8 @@ button#btn-generic {
     width: 187px;
     height: 57px;
   
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    box-shadow: 1.5px 1.5px 3px #0E0E0E, -1.5px -1.5px 3px rgba(95, 94, 94, 0.4);
+    border: 2px solid rgba(15, 3, 3, 0.6);
+    
     border-radius: 50px;
   
     /* Inside auto layout */
