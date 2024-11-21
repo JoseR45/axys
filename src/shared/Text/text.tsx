@@ -1,5 +1,5 @@
 import React from "react";
-import iTextProps from "./text.d";
+import { iTextProps } from "./text.d";
 
 export const Text: React.FC<iTextProps> = ({
   value,
@@ -9,10 +9,11 @@ export const Text: React.FC<iTextProps> = ({
   weight,
   lineHeight,
   textAlign,
+  className,
 }) => {
   return (
     <p
-      className={`w-full break-words ${color} relative z-30`}
+      className={`w-full break-words ${color} relative z-30 ${className}`}
       style={{
         fontFamily: `${family}, sans-serif`,
         fontSize: `${size}`,

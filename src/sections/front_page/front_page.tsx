@@ -1,10 +1,12 @@
 import React from "react";
 import { SocialMediaSet } from "../../shared/SocialMediaSet/social_media_set";
+import { Button } from "../../shared/button/button_component";
+import { Text } from "../../shared/Text/text";
 
 export const FrontPage: React.FC<{}> = () => {
   return (
     <>
-      <section className={`w-full h-screen flex flex-row justify-center`}>
+      <section className={`w-screen h-screen flex flex-row justify-center`}>
         <div
           className={`w-[90%] h-[90%] flex flex-row justify-between items-center`}
         >
@@ -64,15 +66,15 @@ export const FrontPage: React.FC<{}> = () => {
                 </p>
               </div>
               <div className={"flex flex-row justify-end"}>
-                <button
-                  className={"px-4 py-2 rounded-[50px] border border-white"}
-                >
-                  <p
-                    className={`text-[20px] font-[400] text-white text-left font-helvetica`}
-                  >
-                    Hit us up
-                  </p>
-                </button>
+               <Button>
+                <Text
+                        value="Hit us up!"
+                        color="white"
+                        size="22px"
+                        family="helvetica"
+                        textAlign="center">
+                </Text>
+               </Button>
               </div>
             </div>
           </div>
