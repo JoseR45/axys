@@ -8,8 +8,9 @@ export const Contact = () => {
         <div>
             <HR from="right" className="my-8" />
             <div className="ml-16 w-3/5 ">
-                <h1 className="mx-3 text-left my-10">GOT A PROBLEM <br /> TO SOLVE?</h1>
-                <Text className="mx-3 w-3/5 my-10" value="No matter how complex your project is, together we will find the web solution that will propel you to success." color="#808080D4" textAlign="left" size="26px" />
+                <Text className="mx-3 text-left my-10" family="compressed" size="28" color="white" value="GOT A PROBLEM <br /> TO SOLVE?" />
+    
+                <Text className="mx-3 w-3/5 my-10" family="compressed" color="secondary" textAlign="left" size="26px" />
             </div>
             <div className="">
                 <Button>
