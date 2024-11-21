@@ -4,7 +4,7 @@ import { SocialMediaSet } from "../../shared/SocialMediaSet/social_media_set";
 export const FrontPage: React.FC<{}> = () => {
   return (
     <>
-      <section className={`w-screen h-screen flex flex-row justify-center`}>
+      <section className={`w-full h-screen flex flex-row justify-center`}>
         <div
           className={`w-[90%] h-[90%] flex flex-row justify-between items-center`}
         >
