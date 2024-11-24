@@ -15,7 +15,7 @@ export const SocialMediaSet: React.FC<iSocialMediaSet> = ({
   const defaultIcons: IconProp[] = [
     ["fab", "github-square"],
     ["fab", "instagram-square"],
-    ["fab", "square-twitter"],
+    ["fab", "square-x-twitter"],
     ["fab", "linkedin"],
   ];
 
