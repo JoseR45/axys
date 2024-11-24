@@ -27,60 +27,58 @@ export const ChooseUs = () => {
     }, []);
     
     return(
-        <section className="bg-primary mb-10 w-full min-h-[600px] min-w-[600px]  flex flex-col">
+        <section className="bg-primary  w-full  h-auto flex flex-col">
             <div className=" w-full h-8 flex items-center justify-center">
-               <div className="md:w-3/12 w-5/12  h-full">
-                    <Text 
-                    value="Why choose us?"
-                    color="white"
-                    size="25px"
-                    lineHeight="36px"
-                    textAlign="center"
-                    family="Helvetica"
+                <div className="md:w-4/12 lg:w-3/12 w-5/12">
+                    <Text
+                        value="Why choose us"
+                        color="white"
+                        lineHeight="36px"
+                        textAlign="end"
+                        family="Helvetica"
+                        className="text-base sm:text-lg  md:text-2xl"
                     />
                 </div>
-                <div className="md:w-9/12 w-7/12">
+                <div className="w-full">
                     <HR from="right"/>
                </div>
             </div>
-            <div className="w-full h-full flex items-center justify-center relative flex-col lg:flex-row">
-                <div className="w-full h-full flex  items-center justify-center z-20">
-                    <div className="w-[736px] ">
+            <div className="w-full h-full flex items-center justify-center relative flex-row-reverse  lg:flex-row pt-8">
+                <div className="w-full h-full flex  items-center justify-start  p-3 lg:pl-8">
+                    <div className="w-full ">
                         <Text 
                             value="Launching visions," 
-                            size={isMobile?"60px":"100px" }
                             color="text-secundary" 
-                            textAlign={isMobile?"center":"start" }
+                            textAlign="start"
                             family="Helvetica Compressed"
-                            lineHeight={isMobile?"60px":"100px" }
+                            className="text-[40px] sm:text-[80px] lg:text-[100px] leading-[40px] sm:leading-[80px] lg:leading-[100px]"
                             />
                         <Text 
                             value="building websites" 
-                            size={isMobile?"60px":"100px" }
                             color="text-secundary" 
-                            textAlign={isMobile?"center":"start" }
+                            textAlign="start"
                             family="Helvetica Compressed"
-                            lineHeight={isMobile?"60px":"100px" }
+                            className="text-[40px] sm:text-[80px] lg:text-[100px] leading-[40px] sm:leading-[80px] lg:leading-[100px]"
                             />
                             <br />
                         <Text 
                             value="We combine expert web development with a passion for design, creating seamless user experiences that drive results." 
-                            size={isMobile?"27px":"32px" }
                             color="text-white" 
-                            textAlign={isMobile?"center":"start" }
+                            textAlign="start" 
                             family="Helvetica"
-                            lineHeight={isMobile?"30px":"36px" }/>
+                            className="text-[20px] sm:text-[25px] lg:text-[32px] leading-[20px] sm:leading-[25px] lg:leading-[32px]"
+                            />
                     </div>
                 </div>
-                {isMobile&& <br /> }
-                <div className="lg:max-w-[360px] lg:minw-w-[360px] lg:h-[450px] max-w-[450px] minw-w-[450px] h-[360px] min-h-[360px] z-0 overflow-hidden flex items-end justify-end relative">
-                   <div className=" overflow-hidden w-full">
-                   <Skills isMobile={isMobile}></Skills>
+                
+                <div className=" overflow-hidden flex items-end justify-end relative">
+                   <div className=" overflow-hidden w-full h-full  lg:flex items-center">
+                        <Skills ></Skills> 
                     </div>               
                 </div>
             </div>
-            {isMobile&& <br /> }
-            <div>
+
+            <div className="pt-10">
                 <Ticker backgroundColor="transparent" from="right" speed={88}>
                 {ticker_content.map((data, idx) => {
                     return(<Text

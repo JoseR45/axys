@@ -3,7 +3,7 @@ type TextAlign = "left" | "right" | "center" | "justify" | "start" | "end" | "in
 export interface iTextProps {
     value: string;
     color: string;
-    size: string;
+    size?: string;
     family?: string;
     weight?: string;
     lineHeight?: string;
