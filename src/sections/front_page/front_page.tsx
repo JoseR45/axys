@@ -1,16 +1,16 @@
 import React from "react";
 import { SocialMediaSet } from "../../shared/SocialMediaSet/social_media_set";
+import { Button } from "../../shared/button/button_component";
+import { Text } from "../../shared/Text/text";
 
 export const FrontPage: React.FC<{}> = () => {
   return (
     <>
-      <section
-        className={`w-full h-auto flex flex-row justify-center pt-40 pb-20`}
-      >
+      <section className={`w-screen h-screen flex flex-row justify-center`}>
         <div
           className={`w-[90%] h-[90%] flex flex-row justify-between items-center`}
         >
-          <div className={"w-[15%] self-end"}>
+          <div className={"w-[15%] md:self-end"}>
             <SocialMediaSet orientation="vertical"></SocialMediaSet>
           </div>
           <div className={`flex flex-col w-[85%] gap-[20px]`}>
@@ -21,15 +21,24 @@ export const FrontPage: React.FC<{}> = () => {
             >
               <div>
                 <p
-                  className={`text-[50px] sm:text-[70px] md:text-[90px] lg:text-[120px] font-[500] text-white text-left font-compressed`}
+                  className={`text-[50px] sm:text-[70px] md:text-[90px] lg:text-[120px] font-[500] text-white text-left`}
+                  style={{
+                    fontFamily: "Helvetica Compressed, sans-serif",
+                  }}
                 >
                   WEB DESIGN{" "}
                 </p>
                 <p
-                  className={`text-[50px] sm:text-[70px] md:text-[90px] lg:text-[120px] font-[500] text-white text-left font-compressed`}
+                  className={`text-[50px] sm:text-[70px] md:text-[90px] lg:text-[120px] font-[500] text-white text-left`}
+                  style={{
+                    fontFamily: "Helvetica Compressed, sans-serif",
+                  }}
                 >
                   <span
-                    className={`text-[30px] sm:text-[50px] md:text-[70px] lg:text-[90px] font-[500] text-secundary text-left font-compressed`}
+                    className={`text-[30px] sm:text-[50px] md:text-[70px] lg:text-[90px] font-[500] text-secundary text-left`}
+                    style={{
+                      fontFamily: "Helvetica Compressed, sans-serif",
+                    }}
                   >
                     AND
                   </span>{" "}
@@ -45,7 +54,10 @@ export const FrontPage: React.FC<{}> = () => {
             <div className={"flex flex-col gap-[15px]"}>
               <div>
                 <p
-                  className={`text-[15px] sm:text-[20px] md:text-[25px] lg:text-[30px] text-left text-white leading-[22px] sm:leading-[25px] md:leading-[30px] lg:leading-[35px] font-helvetica`}
+                  className={`text-[15px] sm:text-[20px] md:text-[25px] lg:text-[30px] font-[400] text-left text-white leading-[22px] sm:leading-[25px] md:leading-[30px] lg:leading-[35px]`}
+                  style={{
+                    fontFamily: "Helvetica, sans-serif",
+                  }}
                 >
                   We are a Development agency with offices in Havana, Cuba. We
                   combine strategic intelligence with creative intuition and
@@ -54,15 +66,15 @@ export const FrontPage: React.FC<{}> = () => {
                 </p>
               </div>
               <div className={"flex flex-row justify-end"}>
-                <button
-                  className={"px-4 py-2 rounded-[50px] border border-white"}
-                >
-                  <p
-                    className={`text-[20px] font-[400] text-white text-left font-helvetica`}
-                  >
-                    Hit us up
-                  </p>
-                </button>
+               <Button>
+                <Text
+                        value="Hit us up!"
+                        color="white"
+                        size="22px"
+                        family="helvetica"
+                        textAlign="center">
+                </Text>
+               </Button>
               </div>
             </div>
           </div>
