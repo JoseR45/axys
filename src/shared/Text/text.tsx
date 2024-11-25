@@ -16,10 +16,10 @@ export const Text: React.FC<iTextProps> = ({
       className={`w-full break-words ${color} relative z-30 ${className}`}
       style={{
         fontFamily: `${family}, sans-serif`,
-        fontSize: `${size}`,
+        fontSize: `${size? size: 'none'}`,
         color: `${color}`,
         fontWeight: `${weight}`,
-        lineHeight: `${lineHeight}`,
+        lineHeight: `${lineHeight}` || 'normal',
         textAlign: `${textAlign}`,
       }}
     >
