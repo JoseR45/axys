@@ -29,7 +29,7 @@ export const Header: React.FC<iHeaderProps> = ({}) => {
               <p
                 className={`text-[40px] font-[400] text-white text-center font-compressed`}
               >
-                LOGO
+                AXYS
               </p>
             </div>
             <div className={`visible md:hidden`} onClick={handleClickShowItems}>
