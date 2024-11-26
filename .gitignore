@@ -23,3 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 src/App.tsx
+src/sections/font_page/front_page.tsx

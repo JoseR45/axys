@@ -7,7 +7,7 @@ export const Footer: React.FC<iFooterProps> = () => {
     return (
         <div className="pb-20"
         >
-            <HR className="mx-20" from="center" />
+            <HR className="mx-8" from="center" />
             <div className="flex justify-center mt-10">
                 <SocialMediaSet orientation="horizontal"></SocialMediaSet>
             </div>

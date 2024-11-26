@@ -9,7 +9,7 @@ export const Contact = () => {
     const emailIcon = ["email", "src/assets/icons/email-icon.svg"];
 
     return (
-        <section className="w-full min-w-[375px] flex flex-col">
+        <section className="w-full flex flex-col">
             <div className="flex items-center justify-center py-16">
                 <div className="md:w-9/12 w-7/12">
                     <HR from="left" />
@@ -25,23 +25,22 @@ export const Contact = () => {
                     />
                 </div>
             </div>
-            <div className="h-full flex flex-col gap-[15px] ">
-                <div className="flex flex-row justify-start px-20">
-                    <div className="mx-3 my-10 w-3/5">
-                        <Text className="my-10" family="Helvetica Compressed" size="100px" lineHeight="100px" color="text-secundary" textAlign="left" value="GOT A PROBLEM TO SOLVE?" />
-                        <Text className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl" family="Helvetica" size="32px" color="white" lineHeight="36px" textAlign="left" value="No matter how complex your project is, together we will find the web solution that will propel you to success." />
-                        <span className="my-10 flex flex-row gap-x-3">
+            <div className="flex flex-col gap-[15px] lg:px-8 ">
+                <div className="flex flex-row justify-start px-10">
+                    <div className="mx-3 md:w-8/12">
+                        <Text className="mb-10 text-[40px] sm:text-[80px] lg:text-[100px] leading-[40px] sm:leading-[80px] lg:leading-[100px]" family="Helvetica Compressed" color="text-secundary" textAlign="left" value="GOT A PROBLEM TO SOLVE?" />
+                        <Text className="w-7/12 text-[20px] sm:text-[25px] lg:text-[32px] leading-[20px] sm:leading-[25px] lg:leading-[32px]" family="Helvetica" color="white" textAlign="left" value="No matter how complex your project is, together we will find the web solution that will propel you to success." />
+                        <span className="my-10 flex flex-row text-[20px] sm:text-[25px] lg:text-[32px] leading-[20px] sm:leading-[25px] lg:leading-[32px] gap-x-3">
                             <Icon iconName={emailIcon[0]} iconPath={emailIcon[1]}/>
-                            <Text family="Helvetica" size="32px" color="text-secundary" textAlign="left" value="axys@gmail.com"/>   
+                            <Text family="Helvetica" color="text-secundary" textAlign="left" value="axys@gmail.com"/>   
                         </span>
                     </div>
                 </div>
-                <div className={"flex flex-row justify-end px-20 py-16"}>
+                <div className={"flex flex-row justify-end px-16 py-10"}>
                     <Button>
-                        <Text
+                        <Text className="text-[20px] sm:text-[25px] lg:text-[32px] leading-[20px] sm:leading-[25px] lg:leading-[32px]"
                             value="Hit us up!"
                             color="white"
-                            size="22px"
                             family="helvetica"
                             textAlign="center">
                         </Text>
