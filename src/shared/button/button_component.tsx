@@ -1,5 +1,5 @@
 //import React, { useState } from "react";
-import iButtonProps from "./button_component.d";
+import {iButtonProps} from "./button_component.d";
 
 
 export const Button: React.FC<iButtonProps> = ({ children, className }) => {

@@ -5,9 +5,9 @@ import { iFooterProps } from "./footer.d"
 
 export const Footer: React.FC<iFooterProps> = () => {
     return (
-        <div className="py-5 pb-40"
+        <div className="pb-20"
         >
-            <HR from="center" />
+            <HR className="mx-20" from="center" />
             <div className="flex justify-center mt-10">
                 <SocialMediaSet orientation="horizontal"></SocialMediaSet>
             </div>
