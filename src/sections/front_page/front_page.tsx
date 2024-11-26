@@ -65,12 +65,11 @@ export const FrontPage: React.FC<{}> = () => {
                   visible, but tangible.
                 </p>
               </div>
-              <div className={"flex flex-row justify-end"}>
+              <div className={"flex flex-row justify-end px-10 py-10"}>
                <Button>
-                <Text
+                <Text   className="text-[20px] sm:text-[25px] lg:text-[32px] leading-[20px] sm:leading-[25px] lg:leading-[32px]"
                         value="Hit us up!"
                         color="white"
-                        size="22px"
                         family="helvetica"
                         textAlign="center">
                 </Text>
