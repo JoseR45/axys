@@ -1,5 +1,8 @@
 import { MouseEventHandler, PropsWithChildren } from "react";
-export interface iNavItemProps extends PropsWithChildren<{}> {
+
+export type NavItemProps = PropsWithChildren<{
     href: string;
-    handleClickCurrentHref: MouseEventHandler;
-}
+    active: boolean;
+    //handleClickCurrentHref: MouseEventHandler;
+    handleClickCurrentNavItem: MouseEventHandler;
+}>; 

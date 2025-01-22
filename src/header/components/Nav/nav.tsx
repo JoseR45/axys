@@ -1,13 +1,27 @@
-import React from "react";
-import { HR } from "../../../shared/HR/hr";
-import { Text } from "../../../shared/Text/text";
-import { useMarker } from "../../hooks/use_marker";
+import React, { MouseEventHandler, useState } from "react";
 import { NavItem } from "../NavItem/nav_item";
 import { iNavProps } from "./nav.d";
+import navData from "./nav.data";
 
-export const Nav: React.FC<iNavProps> = ({ showMarker = false }) => {
-  const { navItemContainerRef, markerStyle, handleClickCurrentHref } =
-    useMarker();
+export const Nav: React.FC<iNavProps> = () => {
+  const [items, setItems] = useState(navData);
+
+  const handleClickCurrentNavItem: MouseEventHandler<HTMLAnchorElement> = (
+    e
+  ) => {
+    const hTMLAnchorElement = e.currentTarget as HTMLAnchorElement;
+
+    const updatedItems = items.map((i) => {
+      if (hTMLAnchorElement.href.includes(i.href)) {
+        i.active = true;
+      } else {
+        i.active = false;
+      }
+      return i;
+    });
+
+    setItems(updatedItems);
+  };
 
   return (
     <>
@@ -15,65 +29,19 @@ export const Nav: React.FC<iNavProps> = ({ showMarker = false }) => {
         <nav className={"flex flex-col"}>
           <div
             className={`flex flex-col md:flex-row justify-center items-center`}
-            ref={navItemContainerRef}
           >
-            <NavItem
-              href={"#about-section"}
-              handleClickCurrentHref={handleClickCurrentHref}
-            >
-              <Text
-                value="ABOUT"
-                size="24px"
-                color="white"
-                family="Helvetica"
-                weight="400"
-                lineHeight="28px"
-                textAlign="left"
-              />
-            </NavItem>
-            <NavItem
-              href={"#services-section"}
-              handleClickCurrentHref={handleClickCurrentHref}
-            >
-              <Text
-                value="SERVICES"
-                size="24px"
-                color="white"
-                family="Helvetica"
-                weight="400"
-                lineHeight="28px"
-                textAlign="left"
-              />
-            </NavItem>
-            <NavItem
-              href={"#contact-section"}
-              handleClickCurrentHref={handleClickCurrentHref}
-            >
-              <Text
-                value="CONTACT"
-                size="24px"
-                color="white"
-                family="Helvetica"
-                weight="400"
-                lineHeight="28px"
-                textAlign="left"
-              />
-            </NavItem>
-          </div>
-          <div
-            className={`${showMarker ? "flex" : "hidden"} relative w-[${
-              navItemContainerRef.current?.offsetWidth
-            }]`}
-          >
-            <div
-              id="nav-item-marker"
-              style={{
-                width: `${markerStyle.width}px`,
-                transform: `translateX(${markerStyle.left}px)`,
-              }}
-            >
-              <HR from="center" />
-            </div>
+            {items.map((i) => (
+              <NavItem
+                key={i.href}
+                href={i.href}
+                active={i.active}
+                handleClickCurrentNavItem={handleClickCurrentNavItem}
+              >
+                <p className={`text-[24px] text-white font-helvetica`}>
+                  {i.text.toUpperCase()}
+                </p>
+              </NavItem>
+            ))}
           </div>
         </nav>
       </div>

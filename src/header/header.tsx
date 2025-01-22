@@ -18,7 +18,7 @@ export const Header: React.FC<iHeaderProps> = ({}) => {
         className={`w-full bg-primary fixed top-0 z-40`}
       >
         <header
-          className={`w-full flex flex-col md:flex-row justify-between items-center p-2`}
+          className={`w-full flex flex-col md:flex-row justify-between items-center py-4 px-10`}
         >
           <div
             className={

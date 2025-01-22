@@ -1,6 +1,6 @@
 import { MouseEventHandler, useEffect, useRef, useState } from "react";
 
-export function useMarker() {
+export const useMarker = () => {
   const navItemContainerRef = useRef<HTMLDivElement>(null);
   const [markerStyle, setMarkerStyle] = useState({
     left: 0,
@@ -44,4 +44,4 @@ export function useMarker() {
   }, [currentHref]);
 
   return { navItemContainerRef, markerStyle, handleClickCurrentHref };
-}
+};
