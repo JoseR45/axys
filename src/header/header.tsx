@@ -1,15 +1,20 @@
-import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { MouseEventHandler, useState } from "react";
+import { useIcons } from "../hooks/useIcons/use_icons";
 import { Nav } from "./components/Nav/nav";
 import { iHeaderProps } from "./header.d";
 
 export const Header: React.FC<iHeaderProps> = ({}) => {
-  const [showItems, setShowItems] = useState<boolean>(false);
+  const [toggleItems, setToggleItems] = useState<boolean>(false);
 
-  const handleClickShowItems: MouseEventHandler<HTMLDivElement> = () => {
-    setShowItems(!showItems);
+  const handleClickToggleItems: MouseEventHandler<HTMLDivElement> = () => {
+    setToggleItems(!toggleItems);
   };
+
+  const { pickOne } = useIcons();
+
+  const bars_w = pickOne("bars_w");
+
+  const cross_w = pickOne("cross_w");
 
   return (
     <>
@@ -18,7 +23,7 @@ export const Header: React.FC<iHeaderProps> = ({}) => {
         className={`w-full bg-primary fixed top-0 z-40`}
       >
         <header
-          className={`w-full flex flex-col md:flex-row justify-between items-center py-4 px-10`}
+          className={`w-full flex flex-col md:flex-row justify-between items-center py-2 px-2 sm:px-4 md:px-8 lg:px-16`}
         >
           <div
             className={
@@ -32,17 +37,19 @@ export const Header: React.FC<iHeaderProps> = ({}) => {
                 LOGO
               </p>
             </div>
-            <div className={`visible md:hidden`} onClick={handleClickShowItems}>
-              <FontAwesomeIcon
-                icon={showItems ? faClose : faBars}
-                color="#ffffff"
-                size="lg"
+            <div
+              className={`cursor-pointer md:hidden`}
+              onClick={handleClickToggleItems}
+            >
+              <img
+                src={toggleItems ? cross_w?.path : bars_w?.path}
+                className={`w-6 h-6`}
               />
             </div>
           </div>
           <div
             className={`${
-              showItems ? "h-auto" : "h-0"
+              toggleItems ? "h-auto" : "h-0"
             } overflow-hidden md:h-auto max-md:w-full`}
           >
             <Nav />
