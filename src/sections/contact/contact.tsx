@@ -8,9 +8,9 @@ export const Contact = () => {
         <div>
             <HR from="right" className="my-8" />
             <div className="ml-16 w-3/5 ">
-                <Text className="mx-3 text-left my-10" family="compressed" size="28" color="white" value="GOT A PROBLEM <br /> TO SOLVE?" />
+                <Text textAlign="center" className="mx-3 text-left my-10" family="compressed" size="28" color="white" value="GOT A PROBLEM <br /> TO SOLVE?" />
     
-                <Text className="mx-3 w-3/5 my-10" family="compressed" color="secondary" textAlign="left" size="26px" />
+                <Text value="" className="mx-3 w-3/5 my-10" family="compressed" color="secondary" textAlign="left" size="26px" />
             </div>
             <div className="">
                 <Button>
@@ -23,7 +23,7 @@ export const Contact = () => {
                     />
                 </Button>
             </div>
-            <HR className="my-8 bg-hr-linear-gradient" />
+            <HR from="center" className="my-8 bg-hr-linear-gradient" />
         </div>
     );
 }

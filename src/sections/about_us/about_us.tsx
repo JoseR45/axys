@@ -27,14 +27,14 @@ export const AboutUs = () => {
                             color="text-secundary" 
                             textAlign="start"
                             family="Helvetica Compressed"
-                            className="text-[40px] sm:text-[80px] lg:text-[100px] leading-[40px] sm:leading-[80px] lg:leading-[100px]"
+                            className="title"
                             />
                         <Text 
                             value="building websites" 
                             color="text-secundary" 
                             textAlign="start"
                             family="Helvetica Compressed"
-                            className="text-[40px] sm:text-[80px] lg:text-[100px] leading-[40px] sm:leading-[80px] lg:leading-[100px]"
+                            className="title"
                             />
                             <br />
                         <Text 
@@ -42,7 +42,7 @@ export const AboutUs = () => {
                             color="text-white" 
                             textAlign="start" 
                             family="Helvetica"
-                            className="text-[20px] sm:text-[25px] lg:text-[32px] leading-[20px] sm:leading-[25px] lg:leading-[32px]"
+                            className="paragraph"
                             />
                         <Text 
                             value="Let's create something amazing together!" 

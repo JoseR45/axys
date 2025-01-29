@@ -14,3 +14,11 @@ body{
     font-style: normal;
   }
   
+  @layer utilities {
+    .title {
+      @apply text-[40px] sm:text-[80px] lg:text-[100px] leading-[40px] sm:leading-[80px] lg:leading-[100px];
+    }
+    .paragraph{
+      @apply text-[20px] sm:text-[25px] lg:text-[32px] leading-[20px] sm:leading-[25px] lg:leading-[32px];
+    }
+  }

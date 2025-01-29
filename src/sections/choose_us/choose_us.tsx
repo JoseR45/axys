@@ -1,7 +1,6 @@
 import { Ticker } from "../../shared/Ticker/ticker"
 import { Text } from "../../shared/Text/text"
 import { HR } from "../../shared/HR/hr"
-import { useEffect, useState } from "react"
 import { Skills } from "./components/Skills/skills.tsx"
 const ticker_content = [
     "UX DESIGN .",
@@ -13,23 +12,12 @@ const ticker_content = [
 ]
 
 export const ChooseUs = () => {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-      const handleResize = () => {
-        setIsMobile(window.innerWidth <= 1024);
-      };
-  
-      handleResize();
-      window.addEventListener('resize', handleResize);
-  
-      return () => window.removeEventListener('resize', handleResize);
-    }, []);
+   
     
     return(
         <section className="bg-primary  w-full  h-auto flex flex-col">
             <div className=" w-full h-8 flex items-center justify-center">
-                <div className="md:w-4/12 lg:w-3/12 w-5/12">
+                <div className="md:w-4/12 lg:w-3/12 w-6/12 pl-2">
                     <Text
                         value="Why choose us"
                         color="white"
@@ -51,14 +39,14 @@ export const ChooseUs = () => {
                             color="text-secundary" 
                             textAlign="start"
                             family="Helvetica Compressed"
-                            className="text-[40px] sm:text-[80px] lg:text-[100px] leading-[40px] sm:leading-[80px] lg:leading-[100px]"
+                            className="title"
                             />
                         <Text 
                             value="building websites" 
                             color="text-secundary" 
                             textAlign="start"
                             family="Helvetica Compressed"
-                            className="text-[40px] sm:text-[80px] lg:text-[100px] leading-[40px] sm:leading-[80px] lg:leading-[100px]"
+                            className="title"
                             />
                             <br />
                         <Text 
@@ -66,7 +54,7 @@ export const ChooseUs = () => {
                             color="text-white" 
                             textAlign="start" 
                             family="Helvetica"
-                            className="text-[20px] sm:text-[25px] lg:text-[32px] leading-[20px] sm:leading-[25px] lg:leading-[32px]"
+                            className="paragraph"
                             />
                     </div>
                 </div>
@@ -84,11 +72,11 @@ export const ChooseUs = () => {
                     return(<Text
                         key={idx} 
                         value={data} 
-                        size={isMobile?"40px":"64px" }
                         color="text-secundary" 
                         textAlign="center" 
                         family="Helvetica Compressed"
-                        lineHeight="50px"/>)
+                        className="text-[40px] md:text-[60px] leading-[50px]"
+                        />)
                 })}
                 </Ticker>
                 <Ticker backgroundColor="transparent" from="left" speed={103}>
@@ -96,11 +84,11 @@ export const ChooseUs = () => {
                     return(<Text 
                         key={idx}
                         value={data} 
-                        size={isMobile?"40px":"64px" } 
                         color="text-secundary" 
                         textAlign="center" 
                         family="Helvetica Compressed"
-                        lineHeight="50px"/>)
+                        className="text-[40px] md:text-[60px] leading-[50px]"
+                        />)
                 })}
                     
                 </Ticker>
