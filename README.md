@@ -226,4 +226,3 @@ Para revertir un commit anterior.
 - Asegúrate de que cada commit sea pequeño y enfocado en un solo cambio.
 - Usa **commits atómicos** para facilitar el seguimiento de cambios y posibles reversiones.
 
-Esta guía te ayudará a mantener un historial de commits claro y comprensible para todos los colaboradores del proyecto.
